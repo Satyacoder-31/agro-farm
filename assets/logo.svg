@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE79A"/>
+      <stop offset="35%" stop-color="#D4AF37"/>
+      <stop offset="70%" stop-color="#AA7C11"/>
+      <stop offset="100%" stop-color="#F3E08B"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#145A24"/>
+      <stop offset="50%" stop-color="#0E441A"/>
+      <stop offset="100%" stop-color="#082A10"/>
+    </linearGradient>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FDFBF7"/>
+      <stop offset="50%" stop-color="#FFF5D6"/>
+      <stop offset="100%" stop-color="#FFE082"/>
+    </linearGradient>
+    <linearGradient id="sunGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#E65100"/>
+      <stop offset="40%" stop-color="#FF9800"/>
+      <stop offset="100%" stop-color="#FFEB3B"/>
+    </linearGradient>
+    <linearGradient id="fieldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4CAF50"/>
+      <stop offset="60%" stop-color="#2E7D32"/>
+      <stop offset="100%" stop-color="#1B5E20"/>
+    </linearGradient>
+    <!-- Text Paths -->
+    <path id="topTextPath" d="M 90,250 A 160,160 0 0,1 410,250" fill="none"/>
+    <path id="bottomTextPath" d="M 400,250 A 150,150 0 0,1 100,250" fill="none"/>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Ring with Drop Shadow -->
+  <circle cx="250" cy="250" r="236" fill="url(#goldGrad)" filter="url(#shadow)"/>
+  <circle cx="250" cy="250" r="222" fill="#FFFFFF"/>
+  <circle cx="250" cy="250" r="214" fill="url(#greenGrad)"/>
+  <circle cx="250" cy="250" r="206" fill="#FFFFFF"/>
+
+  <!-- Center Circle (Sky & Farm) -->
+  <circle cx="250" cy="250" r="148" fill="url(#skyGrad)"/>
+
+  <!-- Sun & Rays -->
+  <g transform="translate(250, 240)">
+    <!-- Sunburst Rays -->
+    <g stroke="url(#sunGrad)" stroke-width="4" opacity="0.6">
+      <line x1="0" y1="0" x2="0" y2="-120"/>
+      <line x1="0" y1="0" x2="60" y2="-104"/>
+      <line x1="0" y1="0" x2="104" y2="-60"/>
+      <line x1="0" y1="0" x2="120" y2="0"/>
+      <line x1="0" y1="0" x2="-60" y2="-104"/>
+      <line x1="0" y1="0" x2="-104" y2="-60"/>
+      <line x1="0" y1="0" x2="-120" y2="0"/>
+    </g>
+    <!-- Rising Sun Half Circle -->
+    <circle cx="0" cy="0" r="64" fill="url(#sunGrad)"/>
+  </g>
+
+  <!-- Green Farm Hills -->
+  <clipPath id="centerClip">
+    <circle cx="250" cy="250" r="148"/>
+  </clipPath>
+  <g clip-path="url(#centerClip)">
+    <!-- Far hills -->
+    <ellipse cx="250" cy="290" rx="180" ry="70" fill="url(#fieldGrad)"/>
+    <!-- Farm rows (contour lines) -->
+    <path d="M 120,330 Q 250,280 380,330" fill="none" stroke="#81C784" stroke-width="3"/>
+    <path d="M 140,350 Q 250,300 360,350" fill="none" stroke="#81C784" stroke-width="3"/>
+    <path d="M 170,370 Q 250,330 330,370" fill="none" stroke="#A5D6A7" stroke-width="2.5"/>
+
+    <!-- Silhouettes of Rooster (left) and Goat (right) facing center -->
+    <!-- Rooster Silhouette -->
+    <path d="M 180,242 C 175,235 170,225 174,215 C 176,210 182,208 184,204 C 185,200 188,196 193,196 C 196,196 198,198 200,195 C 202,192 199,189 203,186 C 205,188 207,192 208,195 C 213,195 218,192 222,196 C 220,200 216,202 214,206 C 220,212 222,220 220,228 C 218,235 214,242 208,245 C 205,248 205,255 204,260 L 198,260 L 196,252 L 188,252 L 186,260 L 182,260 L 184,248 C 178,250 174,248 180,242 Z" fill="#1B3820"/>
+    <!-- Rooster Comb red accent -->
+    <path d="M 203,186 C 207,183 212,185 215,189 C 212,192 207,193 203,186 Z" fill="#D32F2F"/>
+
+    <!-- Goat Silhouette -->
+    <path d="M 310,248 C 308,235 304,228 296,225 C 290,223 285,225 280,222 C 275,220 270,210 272,204 C 274,200 278,200 280,196 C 275,195 270,198 266,204 C 263,208 262,216 264,222 C 265,228 267,235 264,240 C 261,245 258,248 258,260 L 264,260 L 267,248 L 278,248 L 280,260 L 286,260 L 288,245 C 295,246 302,246 306,242 C 309,248 312,249 310,248 Z" fill="#1B3820"/>
+    <!-- Goat Horn -->
+    <path d="M 278,196 C 283,190 288,188 292,187 C 290,192 284,196 280,198 Z" fill="#AA7C11"/>
+  </g>
+
+  <!-- Center Circle Ring Border -->
+  <circle cx="250" cy="250" r="148" fill="none" stroke="url(#goldGrad)" stroke-width="6"/>
+
+  <!-- Top Text: GUJARAT AGRO FARM -->
+  <text font-family="'Plus Jakarta Sans', 'Arial Black', sans-serif" font-size="29" font-weight="900" fill="#FFFFFF" letter-spacing="4">
+    <textPath href="#topTextPath" startOffset="50%" text-anchor="middle">
+      GUJARAT AGRO FARM
+    </textPath>
+  </text>
+
+  <!-- Stars on Ring Sides -->
+  <g fill="url(#goldGrad)">
+    <!-- Left Star -->
+    <polygon points="90,250 94,240 104,240 96,247 99,257 90,251 81,257 84,247 76,240 86,240"/>
+    <!-- Right Star -->
+    <polygon points="410,250 414,240 424,240 416,247 419,257 410,251 401,257 404,247 396,240 406,240"/>
+  </g>
+
+  <!-- Bottom Ribbon: TRADITIONAL BUSINESS -->
+  <g transform="translate(0, 10)">
+    <!-- Ribbon Shadow & Base -->
+    <path d="M 120,400 L 150,425 L 120,450 L 380,450 L 350,425 L 380,400 Z" fill="#082A10"/>
+    <path d="M 135,395 L 365,395 C 375,395 385,405 385,418 L 385,426 C 385,438 375,448 365,448 L 135,448 C 125,448 115,438 115,426 L 115,418 C 115,405 125,395 135,395 Z" fill="url(#goldGrad)" filter="url(#shadow)"/>
+    <path d="M 138,398 L 362,398 C 370,398 380,406 380,418 L 380,424 C 380,436 370,444 362,444 L 138,444 C 130,444 120,436 120,424 L 120,418 C 120,406 130,398 138,398 Z" fill="url(#greenGrad)"/>
+    
+    <!-- Ribbon Text -->
+    <text x="250" y="428" font-family="'Plus Jakarta Sans', sans-serif" font-size="16" font-weight="900" fill="#FFE79A" text-anchor="middle" letter-spacing="3">
+      TRADITIONAL BUSINESS
+    </text>
+  </g>
+</svg>
