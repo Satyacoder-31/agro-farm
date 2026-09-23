@@ -88,8 +88,9 @@
 
       <!-- Nav Actions -->
       <div class="nav-actions">
-        <a href="https://wa.me/917359326555?text=Namaste%20Gujarat%20Agro%20Farm,%20I%20want%20to%20enquire%20about%20your%20livestock%20and%20produce." target="_blank" class="btn btn-whatsapp btn-sm">
-          WhatsApp
+        <a href="https://wa.me/917359326555?text=Namaste%20Gujarat%20Agro%20Farm,%20I%20want%20to%20enquire%20about%20your%20livestock%20and%20produce." target="_blank" class="btn btn-whatsapp btn-sm" aria-label="WhatsApp Enquiry">
+          <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:currentColor;"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+          <span class="btn-text">WhatsApp</span>
         </a>
         <button class="mobile-toggle" aria-label="Toggle Mobile Menu">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -101,38 +102,54 @@
   <!-- Mobile Drawer -->
   <div class="mobile-nav-drawer">
     <div class="drawer-header">
-      <div class="brand-logo-wrap">
-        <img src="assets/logo.svg" alt="Logo" class="brand-logo-img" style="width: 44px; height: 44px;">
-        <span class="brand-title" style="font-size: 1.15rem;">GUJARAT AGRO</span>
-      </div>
-      <button class="drawer-close" style="background:none; border:none; font-size:2rem; cursor:pointer;">&times;</button>
+      <a href="index.html" class="brand-logo-wrap">
+        <img src="assets/logo.svg" alt="Logo" class="brand-logo-img" style="width: 40px; height: 40px;">
+        <div class="brand-text">
+          <span class="brand-title">GUJARAT AGRO</span>
+          <span class="brand-slogan">પ્રાકૃતિક ફાર્મ</span>
+        </div>
+      </a>
+      <button class="drawer-close" aria-label="Close Menu">&times;</button>
     </div>
     <ul class="drawer-links">
-      <li><a href="index.html" class="drawer-link active">Home</a></li>
-      <li><a href="about.html" class="drawer-link">About Us</a></li>
+      <li><a href="index.html" class="drawer-link active"><span>Home</span></a></li>
+      <li><a href="about.html" class="drawer-link"><span>About Us</span></a></li>
       <li>
-        <a href="poultry.html" class="drawer-link">Poultry Division</a>
+        <a href="poultry.html" class="drawer-link">
+          <span>Poultry Division</span>
+          <span class="drawer-link-badge">6 Breeds</span>
+        </a>
         <div class="drawer-sublinks">
           <a href="sonali-kadaknath.html">Sonali & Kadaknath</a>
           <a href="turkey-guinea-australorp.html">Turkey, Guinea & Australorp</a>
-          <a href="poultry.html#chicks">Day-Old Chicks</a>
+          <a href="poultry.html#chicks">Day-Old Chicks (DOC)</a>
         </div>
       </li>
       <li>
-        <a href="goat-farm.html" class="drawer-link">Goat Livestock</a>
+        <a href="goat-farm.html" class="drawer-link">
+          <span>Goat Livestock</span>
+          <span class="drawer-link-badge">5 Breeds</span>
+        </a>
         <div class="drawer-sublinks">
           <a href="goat-breeds.html#boer">African Boer</a>
           <a href="goat-breeds.html#sirohi">Sirohi & Jamnapari</a>
           <a href="goat-breeds.html#barbari">Barbari & Kids</a>
         </div>
       </li>
-      <li><a href="fish-farming.html" class="drawer-link">Fish Farming (मछली पालन)</a></li>
-      <li><a href="fruits-vegetables.html" class="drawer-link">Organic Fruits & Vegetables</a></li>
-      <li><a href="contact.html" class="drawer-link">Visit Farm & Contact</a></li>
+      <li><a href="fish-farming.html" class="drawer-link"><span>Fish Farming (મછલી પાલન)</span></a></li>
+      <li><a href="fruits-vegetables.html" class="drawer-link"><span>Organic Fruits & Vegetables</span></a></li>
+      <li><a href="contact.html" class="drawer-link"><span>Visit Farm & Contact</span></a></li>
     </ul>
-    <div style="margin-top: 30px;">
-      <a href="tel:+917359326555" class="btn btn-primary" style="width: 100%; margin-bottom: 10px;">Call: 7359326555</a>
-      <a href="https://wa.me/917359326555" class="btn btn-whatsapp" style="width: 100%;">Chat on WhatsApp</a>
+    <div class="drawer-actions-wrap">
+      <a href="tel:+917359326555" class="btn btn-primary">
+        <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:currentColor;margin-right:6px;"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        Call: +91 7359326555
+      </a>
+      <a href="https://wa.me/917359326555?text=Namaste%20Gujarat%20Agro%20Farm,%20I%20want%20to%20enquire%20about%20your%20livestock%20and%20produce." target="_blank" class="btn btn-whatsapp">
+        <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:currentColor;margin-right:6px;"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+        Chat on WhatsApp
+      </a>
+      <div class="farm-location-badge">📍 Pilol, Savli, Vadodara, Gujarat (8 AM - 7 PM)</div>
     </div>
   </div>
 

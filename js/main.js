@@ -112,20 +112,44 @@ function initMobileDrawer() {
 
   if (!toggleBtn || !drawer) return;
 
-  toggleBtn.addEventListener('click', () => {
+  // Ensure backdrop element exists
+  let backdrop = document.querySelector('.drawer-backdrop');
+  if (!backdrop) {
+    backdrop = document.createElement('div');
+    backdrop.className = 'drawer-backdrop';
+    document.body.appendChild(backdrop);
+  }
+
+  const openDrawer = () => {
     drawer.classList.add('open');
-  });
+    backdrop.classList.add('active');
+    document.body.classList.add('drawer-locked');
+  };
+
+  const closeDrawer = () => {
+    drawer.classList.remove('open');
+    backdrop.classList.remove('active');
+    document.body.classList.remove('drawer-locked');
+  };
+
+  toggleBtn.addEventListener('click', openDrawer);
 
   if (closeBtn) {
-    closeBtn.addEventListener('click', () => {
-      drawer.classList.remove('open');
-    });
+    closeBtn.addEventListener('click', closeDrawer);
   }
+
+  backdrop.addEventListener('click', closeDrawer);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && drawer.classList.contains('open')) {
+      closeDrawer();
+    }
+  });
 
   // Close when clicking links inside drawer
   drawer.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
-      drawer.classList.remove('open');
+      closeDrawer();
     });
   });
 }
